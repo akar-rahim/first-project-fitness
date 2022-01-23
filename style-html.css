@@ -1,0 +1,1472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: "Lucida"Grande, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: blue;
+    display: inline;
+}
+
+/*.................................head....................................................*/
+/*.................................head....................................................*/
+/*.................................head....................................................*/
+/*.................................head....................................................*/
+/*.................................head....................................................*/
+/*.................................head....................................................*/
+/*.................................head....................................................*/
+/*.................................head....................................................*/
+
+header .top-header {
+
+    box-shadow: #00000059 0px -20px 50px -28px inset;
+    width: 100%;
+    height: 100px;
+    content: " ";
+    display: table;
+    clear: both;
+    padding: 10px;
+}
+
+header .top-header .nameofthefitness {
+    text-align: center;
+    display: block;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: rgb(104, 103, 103);
+
+
+}
+header .top-header .nameofthefitness::first-letter{
+    font-size: 30px;
+    color: rgb(173, 172, 172);
+}
+
+header .top-header .continer {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-shrink: 20px;
+}
+
+header .top-header .logo-web img {
+    display: block;
+    margin: auto;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+header .top-header .icons {
+    text-align: center;
+
+    width: 50%;
+
+}
+
+header .top-header .icons span {
+    margin-left: 30px;
+    float: right;
+    color: black;
+    font-size: 30px;
+}
+
+header .top-header .icons p {
+    clear: right;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+header .top-header .icons span:hover {
+    transform: scale(1.1);
+
+}
+
+@media screen and (max-width:820px) {
+
+    header .top-header .icons {
+        width: 100%;
+
+    }
+
+    header .top-header .icons span,
+    header .top-header .icons p {
+        float: none;
+        margin: 15px auto;
+        padding: 0 10px;
+        font-size: 25px;
+    }
+
+    header .top-header .logo-web img {
+        max-height: 250px;
+        width: 300px;
+
+    }
+
+
+
+}
+
+@media screen and (max-width:620px) {
+    header .top-header .icons {
+        width: 100%;
+
+    }
+    header .top-header .nameofthefitness{
+        font-size: 20px;
+    }
+
+    header .top-header .icons span,
+    header .top-header .icons p {
+        float: none;
+        margin: 15px auto;
+        padding: 0 10px;
+        font-size: 18px;
+    }
+
+    header .top-header .logo-web img {
+        max-height: 150px;
+        width: 100%;
+
+    }
+
+
+
+}
+
+
+/*..................................................................*/
+
+
+
+
+
+
+/*.............................  navbar   ..................................*/
+
+
+header nav .navlist {
+    float: right;
+    list-style: none;
+    text-align: right;
+}
+
+header nav .navlist li {
+    margin: auto 20px;
+
+
+    display: inline-block;
+    line-height: 80px;
+    list-style: none;
+}
+
+
+header .navbar {
+    z-index: 1000;
+    font-family: Helvetica, sans-serif;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    color: white;
+    background-color: whitesmoke;
+}
+
+header .navbar .show-search {
+    position: absolute;
+    transition: 0.3s;
+    width: 75%;
+    opacity: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    top: 80px;
+    z-index: 0;
+    text-align: center;
+    transform: translatex(17%);
+    height: 0px;
+    background-color: lightgray;
+
+}
+
+header .navbar .show-search .show {
+    width: 75%;
+    display: flex;
+    margin: 10px auto;
+}
+
+header .navbar .show-search .show input {
+    width: 100%;
+    padding: 5px;
+}
+
+header .show-search .show span {
+    padding: 10px;
+    cursor: pointer;
+    line-height: 10px;
+    background-color: grey;
+    color: white;
+
+}
+
+header .nav-logo-search-btn {
+    border-radius: 10px;
+    display: inline-block;
+    color: white;
+
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 30px;
+    font-size: 26px;
+    background-color: rgb(56, 56, 56);
+    text-align: center;
+}
+
+header .nav-logo-search-btn i {
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+header nav .navlist li a {
+    padding: 7px 13px;
+    color: grey;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+
+}
+
+header nav .navlist li a:not(.active):before {
+    content: " ";
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    transition: 0.3s ease-in;
+    border-radius: 5px;
+    height: 4px;
+    position: absolute;
+    background-color: rgb(66, 66, 66);
+}
+
+header nav .navlist li a:hover:before {
+    width: 100%;
+}
+
+
+header nav .navlist li a:hover:not(.navlist .active) {
+    color: rgb(105, 103, 103);
+    transition: .5s;
+}
+
+header .navlist .active {
+    background-color: grey;
+    color: white;
+
+}
+
+header .check-burger {
+    font-size: 35px;
+    color: rgb(61, 61, 61);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+header .check-burger i {
+    line-height: 70px;
+}
+
+header #check-burger {
+    display: none;
+}
+
+header #check-search {
+    display: none;
+}
+
+header #check-search:checked~.show-search {
+    opacity: 1;
+    z-index: 5;
+    display: block;
+    height: 60px;
+
+
+}
+
+@media (max-width: 952px) {
+
+    header nav .navlist li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    header .navbar .check-burger {
+        display: block;
+
+    }
+
+    header .navbar .nav-logo-search-btn {
+
+        margin-top: 8px;
+    }
+
+    header .navbar .check-burger i {
+        line-height: 60px;
+    }
+
+    header nav .navlist li a:hover:not(.navlist .active) {
+        color: rgb(216, 210, 210);
+
+    }
+
+    header .navbar .show-search {
+        width: 100%;
+        transform: none;
+        top: 60px;
+    }
+
+    header .navbar {
+
+
+        height: 60px;
+    }
+
+
+    header .navlist {
+        position: absolute;
+        width: 0;
+        background: rgba(34, 36, 36, 0.9);
+        top: 60px;
+        height: 100vh;
+        opacity: 0;
+        z-index: 4;
+        left: -100%;
+        text-align: center !important;
+        transition: all .5s;
+    }
+
+    header nav .navlist li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    header nav .navlist li a,
+    header .nav-logo-search-btn i {
+        font-size: 25px;
+
+    }
+
+
+    header #check-burger:checked~.navlist {
+        opacity: 1;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    header nav .navlist li a:before {
+        content: none !important;
+    }
+}
+
+@media screen and (max-width:620px) {
+
+    header .nav-logo-search-btn i,
+    header .check-burger {
+        font-size: 16px;
+    }
+
+    header .nav-logo-search-btn {
+        margin-left: 20px;
+        margin-top: 12px !important;
+    }
+
+    header .check-burger {
+        font-size: 25px;
+    }
+
+    header nav .navlist li a {
+        font-size: 16px;
+    }
+
+}
+
+/*........................................................................*/
+/*............................. slider  ..................................*/
+
+header #slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    max-height: 500px;
+    box-shadow: 0px 1px 5px 5px rgb(85, 82, 82);
+
+
+}
+
+header #slider .seemore-btn {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    border-bottom: 5px solid black;
+    opacity: 0.5;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+
+}
+
+header #slider .seemore-btn:hover {
+    opacity: 1;
+    background-color: rgba(199, 195, 195, 0.5);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px black;
+}
+
+header #slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    animation-name: slider-head;
+    animation: 15s slider-head infinite;
+}
+
+header #slider figure img {
+    width: 20%;
+    float: left;
+    object-fit: fill;
+    max-height: 500px;
+
+
+}
+
+@keyframes slider-head {
+
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+
+    25% {
+        left: -100%;
+
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    90% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+
+}
+
+@media screen and (max-width:820px) {
+    header #slider .seemore-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    header #slider .seemore-btn {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+}
+
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+
+
+/*.................................offers....................................................*/
+
+#offers {
+    margin-top: 50px;
+    width: 100%;
+
+}
+
+#offers .offers-header {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+#offers .continer {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+
+}
+
+#offers .continer .card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(6, 120, 226, 0.1) 0px 4px 16px, rgba(6, 120, 226, 0.1) 0px 8px 32px;
+
+    width: 400px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+#offers .continer .card .img {
+    margin: auto;
+    height: 300px;
+
+}
+
+#offers .continer .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+
+
+}
+
+#offers .continer .card .time {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#offers .continer .card h1 {
+    font-size: 35px;
+
+}
+
+#offers .continer .card a {
+    display: block;
+    background-color: rgb(223, 219, 219);
+    color: black;
+    margin: 30px auto;
+    font-weight: bold;
+    padding: 5px;
+    width: 50%;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+#offers .continer .card a:hover {
+    transform: scale(1.1);
+    background-color: rgb(202, 196, 196);
+}
+
+#offers .continer .card p,
+.body .offers .continer .card h1 {
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+
+#offers .continer .card span {
+    position: absolute;
+    display: block;
+}
+
+#offers .continer .card span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, rgb(59, 149, 179));
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+#offers .continer .card span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(59, 149, 179));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+#offers .continer .card span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent, rgb(59, 149, 179));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+#offers .continer .card span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(59, 149, 179));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    #offers .continer {
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width:840px) {
+
+    #offers .continer {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #offers .continer .card {
+        width: 70%;
+
+    }
+
+    #offers .continer .card .img {
+        width: 90%;
+        max-height: 250px;
+
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    #offers .continer .card .img {
+        width: 100%;
+        max-height: 200px;
+
+    }
+
+    #offers .continer .card p,
+    #offers .continer .card h1,
+    #offers .continer .card a {
+        font-size: 25px !important;
+    }
+
+    #offers .continer .card {
+        width: 80%;
+
+    }
+
+    #offers .continer .card a {
+        font-size: 18px !important;
+    }
+
+    #offers .offers-header {
+
+        font-size: 22px;
+
+
+    }
+
+}
+
+
+
+/*line break*/
+
+#line-break-header {
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#line-break-header span p {
+    line-height: 110px;
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#line-break-header span::before {
+    content: " ";
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    width: 30%;
+    border-radius: 0 50% 50% 0;
+    height: 20px;
+    left: 0;
+
+    top: 45px;
+    position: absolute;
+
+}
+
+#line-break-header span::after {
+    content: " ";
+    width: 30%;
+    height: 20px;
+    top: 45px;
+    right: 0;
+    border-radius: 50% 0px 0px 50%;
+    position: absolute;
+    background: linear-gradient(-90deg, #00C9FF 0%, #92FE9D 100%);
+
+}
+
+@media screen and (max-width:650px) {
+
+    #line-break-header span::before,
+    #line-break-header span::after {
+        height: 15px;
+        width: 20%;
+    }
+
+    #line-break-header span p {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+
+    #line-break-header span::before,
+    #line-break-header span::after {
+        height: 10px;
+        width: 20%;
+    }
+
+    #line-break-header span p {
+        font-size: 25px;
+        line-height: 100px;
+    }
+
+}
+
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+/*.................................end-head....................................................*/
+
+/*................................body ........................................*/
+/*................................body ........................................*/
+/*................................body ........................................*/
+/*................................body ........................................*/
+
+
+
+/*................................food-healthy ........................................*/
+/*................................food-healthy ........................................*/
+
+
+
+.healthy-foods .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+.healthy-foods .cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.healthy-foods .col {
+    width: calc(25% - 2rem);
+    margin: 1rem;
+
+}
+
+.healthy-foods .container {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.healthy-foods .front,
+.healthy-foods .back {
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-position: center;
+    -webkit-transition: -webkit-transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.healthy-foods .back {
+    background-color: grey;
+
+}
+
+.healthy-foods .front:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: 0;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.healthy-foods .container:hover .front,
+.healthy-foods .container:hover .back {
+    -webkit-transition: -webkit-transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .10s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.healthy-foods .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.healthy-foods .inner {
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+    perspective: inherit;
+    z-index: 2;
+}
+
+.healthy-foods .container .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.healthy-foods .container .front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.healthy-foods .container:hover .back {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.healthy-foods .container:hover .front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.healthy-foods .front .inner p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.healthy-foods .front .inner p:after {
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+}
+
+.healthy-foods .front .inner span {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Montserrat';
+    font-weight: 300;
+}
+
+@media screen and (max-width: 64rem) {
+    .healthy-foods .col {
+        width: calc(33.333333% - 2rem);
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .healthy-foods .col {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 32rem) {
+    .healthy-foods .col {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+
+    .healthy-foods .front p {
+        font-size: 25px !important;
+    }
+
+}
+
+.healthy-foods .back .inner a {
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    line-height: 40px;
+    font-size: 16px;
+    color: grey;
+
+
+}
+
+
+/*.......... line break...........*/
+
+
+#line-break-healthy-food {
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#line-break-healthy-food span p {
+    line-height: 110px;
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#line-break-healthy-food span::before {
+    content: " ";
+    background-image: linear-gradient(45deg,
+            hsl(240deg 83% 38%) 0%,
+            hsl(288deg 100% 33%) 11%,
+            hsl(314deg 100% 38%) 22%,
+            hsl(329deg 100% 46%) 33%,
+            hsl(337deg 100% 50%) 44%,
+            hsl(354deg 100% 60%) 56%,
+            hsl(19deg 100% 58%) 67%,
+            hsl(36deg 100% 50%) 78%,
+            hsl(46deg 100% 50%) 89%,
+            hsl(55deg 100% 50%) 100%);
+    width: 30%;
+    height: 20px;
+    left: 0;
+    top: 45px;
+    position: absolute;
+
+}
+
+#line-break-healthy-food span::after {
+    content: " ";
+    width: 30%;
+    background-image: linear-gradient(-45deg,
+            hsl(240deg 83% 38%) 0%,
+            hsl(288deg 100% 33%) 11%,
+            hsl(314deg 100% 38%) 22%,
+            hsl(329deg 100% 46%) 33%,
+            hsl(337deg 100% 50%) 44%,
+            hsl(354deg 100% 60%) 56%,
+            hsl(19deg 100% 58%) 67%,
+            hsl(36deg 100% 50%) 78%,
+            hsl(46deg 100% 50%) 89%,
+            hsl(55deg 100% 50%) 100%);
+    height: 20px;
+    top: 45px;
+    right: 0;
+
+    position: absolute;
+
+}
+
+@media screen and (max-width:650px) {
+
+    #line-break-healthy-food span::before,
+    #line-break-healthy-food span::after {
+        height: 15px;
+        width: 20%;
+    }
+
+    #line-break-healthy-food span p {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+
+    #line-break-healthy-food span::before,
+    #line-break-healthy-food span::after {
+        height: 10px;
+        width: 20%;
+    }
+
+    #line-break-healthy-food span p {
+        font-size: 25px;
+        line-height: 100px;
+    }
+
+}
+
+
+/*................................ market........................................*/
+/*................................ market........................................*/
+/*................................ market........................................*/
+#market .shopping {
+    overflow: hidden;
+    max-height: 500px;
+}
+
+/*................................ shop-mens........................................*/
+.shop-mens .container {
+    width: 100%;
+    max-height: 500px;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efefef;
+
+
+
+}
+
+.shop-mens .card {
+    background-color: #fff;
+    position: relative;
+    min-width: 300px;
+    padding: 15px;
+    margin: 25px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px;
+}
+
+.shop-mens .card .imgContainer {
+
+    width: 100%;
+    height: 300px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.shop-mens .card .imgContainer img {
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.shop-mens .card .imgContainer img:nth-child(2) {
+    border-radius: 5px;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s all;
+
+}
+
+.shop-mens .card .imgContainer:hover img:nth-child(2) {
+    opacity: 1;
+    top: 0;
+}
+
+.shop-mens .infoBox .title {
+    margin-top: 10px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+
+}
+
+.shop-mens .infoBox .price {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.shop-mens .infoBox .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.shop-mens .infoBox .buttonGroup button {
+    border: 0;
+    outline: 0;
+    color: #fff;
+    padding: 7px 15px;
+}
+
+.shop-mens .infoBox .buttonGroup button.buy {
+    background-color: #16ad7b;
+    border-radius: 5px;
+
+}
+
+.shop-mens .infoBox .buttonGroup button.addtocart {
+    background-color: rgb(241, 160, 8);
+    border-radius: 5px;
+}
+
+.shop-mens .container .seemore-btn {
+    font-size: 20px;
+    color: black;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+/*........ shop-womens........*/
+
+
+.shop-womens .container {
+    width: 100%;
+    max-height: 500px;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efefef;
+
+
+
+}
+
+.shop-womens .card {
+    background-color: #fff;
+    position: relative;
+    min-width: 300px;
+    padding: 15px;
+    margin: 25px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px;
+}
+
+.shop-womens .card .imgContainer {
+
+    width: 100%;
+    height: 300px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.shop-womens .card .imgContainer img {
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.shop-womens .card .imgContainer img:nth-child(2) {
+    border-radius: 5px;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s all;
+
+}
+
+.shop-womens .card .imgContainer:hover img:nth-child(2) {
+    opacity: 1;
+    top: 0;
+}
+
+.shop-womens .infoBox .title {
+    margin-top: 10px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+
+}
+
+.shop-womens .infoBox .price {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.shop-womens .infoBox .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.shop-womens .infoBox .buttonGroup button {
+    border: 0;
+    outline: 0;
+    color: #fff;
+    padding: 7px 15px;
+}
+
+.shop-womens .infoBox .buttonGroup button.buy {
+    background-color: #16ad7b;
+    border-radius: 5px;
+
+}
+
+.shop-womens .infoBox .buttonGroup button.addtocart {
+    background-color: rgb(241, 160, 8);
+    border-radius: 5px;
+}
+
+.shop-womens .container .seemore-btn {
+    font-size: 20px;
+    color: black;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+#market h1 {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 22px;
+}
+
+
+/*.............. footer .............*/
+
+
+footer {
+    background-color: #2b2c2e;
+    padding: 70px 0px;
+
+}
+
+footer .continer {
+    margin-left: 5%;
+
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5;
+}
+
+footer ul {
+    list-style-type: none;
+
+}
+
+footer .footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+footer .footer-col h4 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+footer .footer-col h4:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: orange;
+    height: 2px;
+    width: 50px;
+    box-sizing: border-box;
+}
+
+footer .footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+
+}
+
+footer .footer-col ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(177, 162, 162);
+    transition: 0.3s;
+}
+
+footer .footer-col ul li a:hover {
+    padding: 0px 10px;
+    color: whitesmoke;
+}
+
+footer .footer-col .social-links a {
+
+    text-align: center;
+}
+
+
+
+
+footer .footer-col .social-links i:hover {
+    color: blue;
+    background-color: white;
+
+
+}
+
+footer .footer-col .social-links a i {
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, .2);
+    color: whitesmoke;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 10px 10px 10px 0px;
+}
+
+@media screen and (max-width:700px) {
+    footer .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width:282px) {
+    footer .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
